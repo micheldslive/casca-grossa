@@ -2,7 +2,8 @@
   <img src="https://github.com/micheldslive/casca-grossa/blob/master/demo/casca-grossa-logo.png" width="300" alt="Unform" />
 </p>	
 <br>	
-## Sobre	
+## Sobre
+
 Casca Grossa é um pequeno projeto de e-commerce, idealizado / desenvolvido durante o bootcamp Gama Experience da Gama Academy.
 
 -------------------------------------
