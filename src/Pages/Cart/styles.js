@@ -150,7 +150,7 @@ export const BigText = styled.span`
 export const CheckoutTitle = styled.h5``;
 
 export const Frete = styled.input`
-  padding: 10px 10px 10px 0;
+  padding: 10px 0 10px 10px;
   width: 100%;
   background: var(--gray);
 
