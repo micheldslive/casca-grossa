@@ -150,9 +150,14 @@ export const BigText = styled.span`
 export const CheckoutTitle = styled.h5``;
 
 export const Frete = styled.input`
-  padding-left: 10px;
+  padding: 10px 10px 10px 0;
   width: 100%;
   background: var(--gray);
+
+  @media (max-width: 700px) {
+    width: initial;
+    padding: 10px;
+  }
 `;
 
 export const Finish = styled.button`
