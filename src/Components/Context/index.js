@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AllProducts } from "../../Services/Api/Products";
+import { AllProducts } from "../../Services/Products";
 
 const ProductContext = React.createContext();
 
