@@ -9,7 +9,7 @@
 Casca Grossa é um pequeno projeto de e-commerce, idealizado / desenvolvido durante o bootcamp Gama Experience da Gama Academy.
 
 -------------------------------------
-### Pré-visualização do Projeto: https://cascagrossa.netlify.app/
+### Pré-visualização do Projeto: https://casca-grossa.vercel.app/
 <img src="https://github.com/micheldslive/casca-grossa/blob/master/demo/demo.gif" width="700"   />
 
 -------------------------------------
