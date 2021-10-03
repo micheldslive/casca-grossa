@@ -22,9 +22,10 @@ import {
 export default class Product extends React.Component {
   render() {
     const { id, name, img, category, old, price, condition, inCart, } = this.props.product;
+    const view = this.props.view;
 
     return (
-      <Column md={4} sm={6}>
+      <Column md={view} sm={6}>
         <ProductConsumer>
           {(value) => (
             <Container onClick={() => {
