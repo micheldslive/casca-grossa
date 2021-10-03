@@ -21,6 +21,10 @@ export const CountSpan = styled.span`
 
 export const ProductView = styled.div`
   display: flex;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const TreeView = styled.a`
