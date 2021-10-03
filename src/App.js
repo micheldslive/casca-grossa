@@ -13,11 +13,12 @@ import Page404 from "./Pages/404";
 import Base from "./Components/Footer";
 import Breadcrumbs from "./Components/Breadcrumbs";
 import ScrollToTop from "./Components/ScrollToTop";
-import "./Global/Global.css";
+import { GlobalStyle } from "./Global/Global";
 
 function App() {
   return (
     <Router>
+      <GlobalStyle/>
       <Helmet
         titleTemplate="%s - Casca Grossa Store" defaultTitle="Casca Grossa">
         <meta name="description" content="React.js application" />

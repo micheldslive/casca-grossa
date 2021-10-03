@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
@@ -45,21 +49,20 @@ a:hover {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1280px) {
-  section {
+section {
+
+  @media (min-width: 1280px) {
     max-width: 1250px;
     margin: 0 auto;
   }
-}
 
-@media screen and (min-width: 880px) and (max-width: 1279px) {
-  section {
+  @media (min-width: 880px) and (max-width: 1279px) {
     margin: 0 35px;
   }
-}
 
-@media screen and (max-width: 879px) {
-  section {
+  @media (max-width: 879px) {
     margin: 0 15px;
   }
 }
+
+`;
