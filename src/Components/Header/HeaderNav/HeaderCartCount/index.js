@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ProductConsumer } from "../../../Context";
+import { ProductConsumer } from "Components/Context";
 import { Count } from "../styles";
 
 export default class CartCount extends Component {

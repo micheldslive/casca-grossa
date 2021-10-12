@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { ProductConsumer } from "../../Components/Context";
-import Product from "../../Components/Products/Card";
+import { ProductConsumer } from "Components/Context";
+import Product from "Components/Products/Card";
 import { Container, Title, Desc, Header, Count } from "./styles";
 import Row from "react-bootstrap/Row";
 

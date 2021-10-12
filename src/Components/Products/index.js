@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductConsumer } from "../Context";
+import { ProductConsumer } from "Components/Context";
 import Product from "./Card";
 
 export default function Products({ view }) {

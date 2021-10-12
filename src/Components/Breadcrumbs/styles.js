@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HomeIcon from "./img/home.svg";
+import HomeIcon from "Assets/Images/home.svg";
 
 export { HomeIcon };
 

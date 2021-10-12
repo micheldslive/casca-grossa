@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Row from "react-bootstrap/Row";
+import Products from "Components/Products";
 import {
   Container,
   ProductHeader,
@@ -9,10 +11,6 @@ import {
   FourView,
   ViewSpan,
 } from "./styles";
-import Row from "react-bootstrap/Row";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import Products from "../../Components/Products";
 
 const Main = () => {
   const [view, setView] = useState(4);

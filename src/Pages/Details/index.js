@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import { ProductConsumer } from "../../Components/Context";
+import { ProductConsumer } from "Components/Context";
 import NumberFormat from "react-number-format";
 import {
   Product,

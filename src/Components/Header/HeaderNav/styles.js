@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "./images/casca-grossa-logo.svg";
-import Cart from "./images/cart.svg";
-import Entrar from "./images/user.svg";
-import Wishlist from "./images/heart.svg";
+import Logo from "Assets/Images/casca-grossa-logo.svg";
+import Cart from "Assets/Images/cart.svg";
+import Entrar from "Assets/Images/user.svg";
+import Wishlist from "Assets/Images/heart.svg";
 
 export { Logo, Cart, Wishlist, Entrar };
 

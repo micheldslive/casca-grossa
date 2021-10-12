@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import truck from "./images/delivery-truck.svg";
-import bcode from "./images/bar-code.svg";
-import card from "./images/credit-card.svg";
+import truck from "Assets/Images/delivery-truck.svg";
+import bcode from "Assets/Images/bar-code.svg";
+import card from "Assets/Images/credit-card.svg";
 
 export { truck };
 export { bcode };

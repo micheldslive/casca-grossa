@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import GamaLogo from "./img/gama-logo.png";
+import GamaLogo from "Assets/Images/gama-logo.png";
 import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

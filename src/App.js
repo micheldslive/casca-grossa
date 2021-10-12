@@ -14,6 +14,7 @@ import Base from "./Components/Footer";
 import Breadcrumbs from "./Components/Breadcrumbs";
 import ScrollToTop from "./Components/ScrollToTop";
 import { GlobalStyle } from "./Global/Global";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

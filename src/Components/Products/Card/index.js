@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "../../Context";
+import { ProductConsumer } from "Components/Context";
 import NumberFormat from 'react-number-format';
 
 import {

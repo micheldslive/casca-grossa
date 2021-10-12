@@ -42,10 +42,9 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
   margin: 0;
   border: 0;
-  text-decoration: none;
 }
 
-a:hover {
+a, a:hover {
   text-decoration: none;
 }
 

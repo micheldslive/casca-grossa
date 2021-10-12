@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ProductCart from "./ProductCart";
 import NumberFormat from "react-number-format";
-import { ProductConsumer } from "../../Components/Context";
+import { ProductConsumer } from "Components/Context";
 import {
   Cart,
   Container,
