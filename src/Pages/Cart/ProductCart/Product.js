@@ -14,7 +14,7 @@ import {
 } from "../styles";
 
 export default function cartProduct({ item, value }) {
-  const { id, name, img, price, total, count } = item;
+  const { id, name, imagens, price, total, count } = item;
   const { increment, decrement, removeItem } = value;
 
   return (
@@ -22,7 +22,7 @@ export default function cartProduct({ item, value }) {
       <TableRow>
         <TableCol colSpan={3}>
           <Product>
-            <ProductImage src={img[0]} />
+            <ProductImage src={imagens[0]?.url} />
             <ProductTitle>{name}</ProductTitle>
           </Product>
         </TableCol>

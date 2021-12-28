@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { AllProducts } from "Services/Products";
+import { Api } from "Services/Api";
 
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct: AllProducts[0],
+    detailProduct: [],
     cart: [],
     modalOpen: false,
-    modalProduct: AllProducts[0],
+    modalProduct: [],
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0,
@@ -24,14 +24,11 @@ class ProductProvider extends Component {
     });
   }
 
-  setProducts = () => {
-    let tempProducts = [];
-    AllProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
-    });
-    this.setState(() => {
-      return { products: tempProducts };
+  setProducts = async () => {
+    await Api.get(`produtos/`).then((res) => {
+      this.setState(() => {
+        return { products: res.data, detailProduct: res.data[0], modalProduct: res.data[0]};
+      });
     });
   };
 

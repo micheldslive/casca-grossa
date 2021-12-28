@@ -21,9 +21,8 @@ import {
 
 export default class Product extends React.Component {
   render() {
-    const { id, name, img, category, old, price, condition, inCart, } = this.props.product;
+    const { id, name, imagens, categoria, old, price, condition, inCart } = this.props.product;
     const view = this.props.view;
-
     return (
       <Column md={view} sm={6}>
         <ProductConsumer>
@@ -32,17 +31,17 @@ export default class Product extends React.Component {
                 value.handleDetail(id);
               }}>
               <ImageClick to="/details">
-                <Image src={img[0]} alt={name} />
+                <Image src={imagens[0]?.url} alt={name} />
               </ImageClick>
               <ItemDescription>
-                <Category>{category}</Category>
+                <Category>{categoria?.categoria}</Category>
                 <DivTitle>
                   <Title>{name}</Title>
                 </DivTitle>
               </ItemDescription>
               <Prices>
                 <OldPrice>
-                  <NumberFormat value={old} displayType={'text'} decimalSeparator="," prefix={'R$ '} />
+                  <NumberFormat value={old ? old : ""} displayType={'text'} decimalSeparator="," prefix={'R$ '} />
                 </OldPrice>
                 <NewPrice>
                   <NumberFormat value={price} displayType={'text'} decimalSeparator="," prefix={'R$ '} />

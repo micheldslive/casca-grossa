@@ -42,7 +42,9 @@ export default class Details extends Component {
           <ProductConsumer>
             {(value) => {
                 
-              const { id, img, name, old, price, Desc, inCart } = value.detailProduct;
+              const { id, imagens, name, old, price, desc, inCart } = value.detailProduct;
+              const old_price = old ? old : "";
+              const imagem = imagens ? imagens[0].url : '';
 
               return (
                 <Card id={id}>
@@ -53,13 +55,13 @@ export default class Details extends Component {
                   <ProductImage>
                     <Display>
                       <Showcase>
-                        <Image src={src ? src : img[0]} alt={name} />
+                        <Image src={src ? src : imagem} alt={name} />
                       </Showcase>
                     </Display>
                     <ImageSelect>
-                      {img.length > 1 ? img.map((img, index) => (
+                      {imagens?.length > 1 ? imagens.map(({url}, index) => (
                             <Link key={index}>
-                              <Image shadow src={img} alt={name} onClick={() => this.onChange(img)}/>
+                              <Image shadow src={url} alt={name} onClick={() => this.onChange(url)}/>
                             </Link>
                           )) : ""}
                     </ImageSelect>
@@ -67,9 +69,9 @@ export default class Details extends Component {
                   <ProductContent>
                     <Title>{name}</Title>
                     <Prices>
-                      <OldPrice> de 
+                      <OldPrice>{old_price ? `de ` : ''}
                           <span>
-                          <NumberFormat value={old} displayType={"text"} decimalSeparator="," prefix={"R$ "}/>
+                          <NumberFormat value={old_price} displayType={"text"} decimalSeparator="," prefix={"R$ "}/>
                         </span> por
                       </OldPrice>
                       <NewPrice>
@@ -78,7 +80,7 @@ export default class Details extends Component {
                         </span>
                       </NewPrice>
                     </Prices>
-                    <ProductDetails>{Desc}</ProductDetails>
+                    <ProductDetails>{desc}</ProductDetails>
                     <hr/>
                     <Purchase>
                       <ButtonCart disabled={inCart ? true : false} onClick={() => {
