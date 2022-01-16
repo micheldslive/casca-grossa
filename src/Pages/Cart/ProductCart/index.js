@@ -6,7 +6,7 @@ export default function CartList({ value }) {
   return (
     <>
       {cart.map((item) => {
-        return <Product key={item.id} item={item} value={value} />;
+        return <Product key={item.produtoid} item={item} value={value} />;
       })}
     </>
   );

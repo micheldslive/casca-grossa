@@ -21,14 +21,14 @@ import {
 
 export default class Product extends React.Component {
   render() {
-    const { id, name, imagens, categoria, old, price, condition, inCart } = this.props.product;
+    const { produtoid, name, imagens, categoria, old, price, condition, inCart } = this.props.product;
     const view = this.props.view;
     return (
       <Column md={view} sm={6}>
         <ProductConsumer>
           {(value) => (
             <Container onClick={() => {
-                value.handleDetail(id);
+                value.handleDetail(produtoid);
               }}>
               <ImageClick to="/details">
                 <Image src={imagens[0]?.url} alt={name} />
@@ -50,7 +50,7 @@ export default class Product extends React.Component {
               </Prices>
                 <Button as={Link} to="/details" background="background"><i className="fas fa-search"></i> VER MAIS</Button>
               <Button disabled={inCart ? true : false} onClick={() => {
-                  value.addToCart(id);
+                  value.addToCart(produtoid);
                 }}>
                 {inCart ? (
                   <span><i className="fas fa-check"></i> ADICIONADO</span>

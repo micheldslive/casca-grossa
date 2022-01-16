@@ -14,7 +14,7 @@ import {
 } from "../styles";
 
 export default function cartProduct({ item, value }) {
-  const { id, name, imagens, price, total, count } = item;
+  const { produtoid, name, imagens, price, total, count } = item;
   const { increment, decrement, removeItem } = value;
 
   return (
@@ -32,11 +32,11 @@ export default function cartProduct({ item, value }) {
         <TableCol data-label="Quantidade">
           <CountContainer>
             <CountBox>
-              <Link count="true" onClick={() => decrement(id)}>-</Link>
+              <Link count="true" onClick={() => decrement(produtoid)}>-</Link>
               <Count>{count}</Count>
-              <Link count="true" onClick={() => increment(id)}>+</Link>
+              <Link count="true" onClick={() => increment(produtoid)}>+</Link>
             </CountBox>
-            <Link onClick={() => removeItem(id)}>
+            <Link onClick={() => removeItem(produtoid)}>
             <i className="fas fa-trash"> remover</i>
           </Link>
           </CountContainer>

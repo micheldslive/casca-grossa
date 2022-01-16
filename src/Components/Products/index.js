@@ -7,7 +7,7 @@ export default function Products({ view }) {
     <ProductConsumer>
       {(value) => {
         return value.products.map((product) => {
-          return <Product key={product.id} product={product} view={view} />;
+          return <Product key={product.produtoid} product={product} view={view} />;
         });
       }}
     </ProductConsumer>

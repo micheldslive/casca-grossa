@@ -42,12 +42,12 @@ export default class Details extends Component {
           <ProductConsumer>
             {(value) => {
                 
-              const { id, imagens, name, old, price, desc, inCart } = value.detailProduct;
+              const { produtoid, imagens, name, old, price, desc, inCart } = value.detailProduct;
               const old_price = old ? old : "";
               const imagem = imagens ? imagens[0].url : '';
 
               return (
-                <Card id={id}>
+                <Card id={produtoid}>
                   <Helmet>
                     <title>{name}</title>
                     <meta name="description" content={name} />
@@ -84,7 +84,7 @@ export default class Details extends Component {
                     <hr/>
                     <Purchase>
                       <ButtonCart disabled={inCart ? true : false} onClick={() => {
-                          value.addToCart(id);
+                          value.addToCart(produtoid);
                         }}>
                         {inCart ? (
                           <span><i className="fas fa-check"></i> Produto Adicionado</span>

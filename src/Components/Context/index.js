@@ -18,9 +18,9 @@ class ProductProvider extends Component {
   componentDidMount() {
     this.setProducts();
     this.setState({
-      unified: !localStorage.getItem("myObject")
+      unified: !localStorage.getItem("cascagrossa")
         ? []
-        : JSON.parse(localStorage.getItem("myObject")),
+        : JSON.parse(localStorage.getItem("cascagrossa")),
     });
   }
 
@@ -33,7 +33,7 @@ class ProductProvider extends Component {
   };
 
   getItem = (id) => {
-    const product = this.state.products.find((item) => item.id === id);
+    const product = this.state.products.find((item) => item.produtoid === id);
     return product;
   };
 
@@ -63,7 +63,7 @@ class ProductProvider extends Component {
           { cart: this.state.cart },
           { subTotal: this.state.cartSubTotal }
         );
-        localStorage.setItem("myObject", JSON.stringify(unified));
+        localStorage.setItem("cascagrossa", JSON.stringify(unified));
       }
     );
   };
@@ -83,7 +83,7 @@ class ProductProvider extends Component {
 
   increment = (id) => {
     let tempCart = [...this.state.cart];
-    const selectedProduct = tempCart.find((item) => item.id === id);
+    const selectedProduct = tempCart.find((item) => item.produtoid === id);
 
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
@@ -130,7 +130,7 @@ class ProductProvider extends Component {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
 
-    tempCart = tempCart.filter((item) => item.id !== id);
+    tempCart = tempCart.filter((item) => item.produtoid !== id);
 
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];
