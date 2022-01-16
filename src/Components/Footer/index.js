@@ -34,7 +34,7 @@ export default class Baseboard extends Component {
               </Collumn>
               <Collumn lg={3} sm={6}>
                 <Title>ATENDIMENTO</Title>
-                <Paragraph><LinkHref href="tel:+081995593520">(81) 9 9559-3520</LinkHref></Paragraph>
+                <Paragraph><LinkHref href="https://api.whatsapp.com/send?phone=+558195593520">(81) 9 9559-3520</LinkHref></Paragraph>
                 <Paragraph><LinkHref href="mailto:micheldslive@gmail.com">micheldslive@gmail.com</LinkHref></Paragraph>
                 <Paragraph>Segunda à sexta: <Block>09H às 18H</Block></Paragraph>
               </Collumn>
