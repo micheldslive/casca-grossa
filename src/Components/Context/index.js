@@ -27,7 +27,11 @@ class ProductProvider extends Component {
   setProducts = async () => {
     await Api.get(`produtos/`).then((res) => {
       this.setState(() => {
-        return { products: res.data, detailProduct: res.data[0], modalProduct: res.data[0]};
+        return {
+          products: res.data,
+          detailProduct: res.data[0],
+          modalProduct: res.data[0],
+        };
       });
     });
   };
